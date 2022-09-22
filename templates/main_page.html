@@ -34,15 +34,17 @@
                   <th scope="col">Задачи</th>
                   <th scope="col">Статус</th>
                   <th scope="col">Дедлайн</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
               {% for article in articles %}
                 <tr>
                   <th scope="row">{{ article.pk }}</th>
-                  <td><a href="task/{{ article.pk }}" >{{ article.description }}</a></td>
+                  <td>{{ article.description }}</td>
                   <td>{{ article.status }}</td>
                   <td>{{ article.deadline|date:'Y-m-d' }}</td>
+                  <td><a href="task/{{ article.pk }}" >Подробнее</a></td>
                 </tr>
               {% endfor %}
               </tbody>
