@@ -8,6 +8,7 @@ class Todo(models.Model):
     status = models.CharField(verbose_name='Статус', choices=CHOICES, max_length=15, default='new', null=False,
                               blank=False)
     deadline = models.DateField(verbose_name='Дата выполнения', default='')
+    more_info = models.TextField(verbose_name='Подробное описание', max_length=200, null=True, default='')
 
     def __str__(self):
         return f'{self.description} - {self.status}'
