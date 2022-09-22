@@ -40,7 +40,7 @@
               {% for article in articles %}
                 <tr>
                   <th scope="row">{{ article.pk }}</th>
-                  <td>{{ article.description }}</td>
+                  <td><a href="task/{{ article.pk }}" >{{ article.description }}</a></td>
                   <td>{{ article.status }}</td>
                   <td>{{ article.deadline|date:'Y-m-d' }}</td>
                 </tr>
