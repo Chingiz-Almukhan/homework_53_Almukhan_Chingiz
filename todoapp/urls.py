@@ -4,9 +4,11 @@ from todoapp.views.add import add_view, add
 from todoapp.views.base import index_view
 from todoapp.views.delete import delete_view, delete
 from todoapp.views.edit import edit_view, edit, confirm_edit
+from todoapp.views.task_view import task_view
 
 urlpatterns = [
     path('', index_view),
+    path('task/<int:pk>', task_view),
     path('add/', add_view),
     path("add/add_to_list/", add),
     path('edit/', edit_view),
