@@ -5,7 +5,8 @@
   "fields": {
     "description": "Закончить домашку",
     "status": "ready",
-    "deadline": "2022-09-19"
+    "deadline": "2022-09-19",
+    "more_info": "начал делать ее\r\n1"
   }
 },
 {
@@ -14,7 +15,8 @@
   "fields": {
     "description": "Встать раньше обеда",
     "status": "new",
-    "deadline": "2022-09-19"
+    "deadline": "2022-09-19",
+    "more_info": "на этот раз точно встану"
   }
 },
 {
@@ -22,7 +24,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$260000$oYd279JIjUPG621d9bRNkp$rQWwy3KZWawoWwEcgulOt0zYPj4W1oOTP/gsDu1rtPc=",
-    "last_login": "2022-09-19T21:41:07.015Z",
+    "last_login": "2022-09-22T21:44:11.024Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
