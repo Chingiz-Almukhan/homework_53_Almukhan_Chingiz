@@ -16,7 +16,7 @@
 
             <h4 class="text-center my-3 pb-3">Редактировать Задачу</h4>
 
-            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="confirm/" method="POST">
+            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="{% url 'get_task_by_id' %}" method="POST">
               {% csrf_token %}
               <div class="col-12">
                 <div class="form-outline">

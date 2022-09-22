@@ -11,4 +11,4 @@ def delete(request):
     pk = request.POST.get('id')
     articles = Todo.objects.get(pk=pk)
     articles.delete()
-    return redirect('http://127.0.0.1:8000/')
+    return redirect('main')

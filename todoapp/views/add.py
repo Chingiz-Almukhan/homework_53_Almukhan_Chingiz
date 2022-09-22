@@ -14,4 +14,4 @@ def add(request):
     deadline = request.POST.get('deadline')
     more_info = request.POST.get('more_info')
     article = Todo.objects.create(description=description, status=status, deadline=deadline, more_info=more_info)
-    return redirect('http://127.0.0.1:8000/')
+    return redirect('main')

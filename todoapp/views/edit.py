@@ -22,4 +22,4 @@ def confirm_edit(request):
     articles.deadline = request.POST.get('deadline')
     articles.more_info = request.POST.get('more_info')
     articles.save()
-    return redirect('http://127.0.0.1:8000/')
+    return redirect('main')

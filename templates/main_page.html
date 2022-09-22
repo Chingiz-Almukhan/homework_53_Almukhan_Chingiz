@@ -17,13 +17,13 @@
 
             <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
               <div class="col-12">
-                <a href="add/" type="submit" class="btn btn-primary">Добавить</a>
+                <a href="{% url 'add' %}" type="submit" class="btn btn-primary">Добавить</a>
               </div>
               <div class="col-12">
-                <a href="edit/" type="submit" class="btn btn-warning">Редактировать</a>
+                <a href="{% url 'edit' %}" type="submit" class="btn btn-warning">Редактировать</a>
               </div>
               <div class="col-12">
-                <a href="delete/" type="submit" class="btn btn-danger">Удалить</a>
+                <a href="{% url 'delete' %}" type="submit" class="btn btn-danger">Удалить</a>
               </div>
             </form>
 
@@ -44,7 +44,7 @@
                   <td>{{ article.description }}</td>
                   <td>{{ article.status }}</td>
                   <td>{{ article.deadline|date:'Y-m-d' }}</td>
-                  <td><a href="task/{{ article.pk }}" class="btn btn-dark" >Подробнее</a></td>
+                  <td><a href="{% url 'task' article.pk %}" class="btn btn-dark" >Подробнее</a></td>
                 </tr>
               {% endfor %}
               </tbody>
