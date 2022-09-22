@@ -44,7 +44,7 @@
                   <td>{{ article.description }}</td>
                   <td>{{ article.status }}</td>
                   <td>{{ article.deadline|date:'Y-m-d' }}</td>
-                  <td><a href="task/{{ article.pk }}" >Подробнее</a></td>
+                  <td><a href="task/{{ article.pk }}" class="btn btn-dark" >Подробнее</a></td>
                 </tr>
               {% endfor %}
               </tbody>
