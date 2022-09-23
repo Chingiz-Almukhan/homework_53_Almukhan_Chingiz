@@ -6,6 +6,12 @@
               <div class="col-12">
                 <a href="{% url 'main' %}" type="submit" class="btn btn-primary">Главная страница</a>
               </div>
+             <div class="col-12">
+                <a href="{% url 'edit' task.id %}" type="submit" class="btn btn-warning">Редактировать</a>
+              </div>
+              <div class="col-12">
+                <a href="{% url 'delete' task.id %}" type="submit" class="btn btn-danger">Удалить</a>
+              </div>
             </form>
             <table class="table mb-4">
               <thead>
