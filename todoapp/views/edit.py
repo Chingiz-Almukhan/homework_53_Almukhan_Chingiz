@@ -3,12 +3,7 @@ from django.shortcuts import render, redirect
 from todoapp.models import Todo
 
 
-def edit_view(request):
-    return render(request, 'edit_page.html')
-
-
-def edit(request):
-    pk = request.POST.get('id')
+def edit(request, pk):
     articles = Todo.objects.get(pk=pk)
     context = {'article': articles}
     return render(request, 'edit_task.html', context)
