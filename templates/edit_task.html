@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit task</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+{% extends 'base.html' %}
+{% block title %} Edit task {% endblock %}
 
-</head>
-<body>
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-lg-9 col-xl-7">
-        <div class="card rounded-3">
-          <div class="card-body p-4">
-
+{% block content %}
             <h4 class="text-center my-3 pb-3">Редактировать Задачу</h4>
-
             <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="{% url 'confirm_edit' %}" method="POST">
               {% csrf_token %}
               <label>
@@ -34,10 +21,8 @@
                         <option value="new">new</option>
                         <option value="in process">in process</option>
                         <option value="ready">ready</option>
-
                     </select>
                   </label>
-
                 </div>
               </div>
               <div class="col-12">
@@ -50,20 +35,8 @@
                   <label for="more_info"></label><p><textarea name="more_info" required id="more_info" class="form-control">{{ article.more_info }}</textarea></p>
                 </div>
               </div>
-
               <div class="col-12">
                 <button type="submit" class="btn btn-primary mt-4">Редактировать</button>
               </div>
             </form>
-
-              <tbody>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</body>
-</html>
+{% endblock %}
